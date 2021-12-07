@@ -32,6 +32,6 @@
   "description": "",
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/integration/login"
+    "stepDefinitions": "cypress/integration/submitApplication"
   }
 }

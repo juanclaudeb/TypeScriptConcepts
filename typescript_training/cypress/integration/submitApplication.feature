@@ -1,8 +1,8 @@
-Feature: Login to website test
+Feature: Complete student application form
 
-    Login different users for website
+    Complete all fields in the student application form and verify that the data is correct on the submit summary
 
-    Scenario: Login to website
+    Scenario: Complete student application form
         Given I am at the test page
         And I insert the firstname value
         And I insert the lastname value

@@ -24,64 +24,64 @@ export class ApplicationPageObjectModel {
   }
 
   public static insertLastName(lastname: string){
-  cy.get(ApplicationPageObjectModel.lastNameTxt)
-    .type(lastname);
+    cy.get(ApplicationPageObjectModel.lastNameTxt)
+      .type(lastname);
   }
 
   public static insertEmail(email: string){
-  cy.get(ApplicationPageObjectModel.emailTxt)
-    .type(email);
+    cy.get(ApplicationPageObjectModel.emailTxt)
+      .type(email);
   }
 
   public static tickMaleRadioButton(){
-  cy.get(ApplicationPageObjectModel.maleRb)
-    .click();
+    cy.get(ApplicationPageObjectModel.maleRb)
+      .click();
   }
 
   public static insertMobileNumber(mobileNumber: string){
-  cy.get(ApplicationPageObjectModel.userNumberTxt)
-    .type(mobileNumber);
+    cy.get(ApplicationPageObjectModel.userNumberTxt)
+      .type(mobileNumber);
   }
 
   public static insertDateOfBirth(dateOfBirth: string){
-  cy.get(ApplicationPageObjectModel.dateOfBirthDp)
-    .type('{selectall}')
-    .type(dateOfBirth)
-    .type('{enter}');
+    cy.get(ApplicationPageObjectModel.dateOfBirthDp)
+      .type('{selectall}')
+      .type(dateOfBirth)
+      .type('{enter}');
   }
 
   public static insertSubjects(subjects: string){
-  cy.get(ApplicationPageObjectModel.subjectsTxt)
-    .type(subjects + '{enter}');
+    cy.get(ApplicationPageObjectModel.subjectsTxt)
+      .type(subjects + '{enter}');
   }
 
   public static tickMusicCheckbox(){
-  cy.get(ApplicationPageObjectModel.musicChkB)
-    .click();
+    cy.get(ApplicationPageObjectModel.musicChkB)
+      .click();
   }
 
   public static uploadStudentPicture(picture: string){
-  cy.get(ApplicationPageObjectModel.uploadPictureBtn)
-    .attachFile(picture);
+    cy.get(ApplicationPageObjectModel.uploadPictureBtn)
+      .attachFile(picture);
   }
 
   public static insertAddress(address: string){
-  cy.get(ApplicationPageObjectModel.addressTxt)
-    .type(address);
+    cy.get(ApplicationPageObjectModel.addressTxt)
+      .type(address);
   }
 
   public static insertState(state: string){
-  cy.get(ApplicationPageObjectModel.stateDrpD)
-    .type(state + '{enter}');
+    cy.get(ApplicationPageObjectModel.stateDrpD)
+      .type(state + '{enter}');
   }
 
   public static insertCity(city: string){
-  cy.get(ApplicationPageObjectModel.ctyDrpD)
-    .type(city + '{enter}');
+    cy.get(ApplicationPageObjectModel.ctyDrpD)
+      .type(city + '{enter}');
   }
 
   public static clickSubmitBtn(){
-  cy.get(ApplicationPageObjectModel.submitBtn)
-    .click();
+    cy.get(ApplicationPageObjectModel.submitBtn)
+      .click();
   }
 }
