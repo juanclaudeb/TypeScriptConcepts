@@ -12,8 +12,9 @@ Feature: Login to website test
         And I insert the date of birth value
         And I insert the subjects value
         And I tick the music checkbox
+        And I upload the image file
         And I insert the current address value
         And I select the state value
         And I select the city value
         And I click the submit button
-        And upload image file
+        Then I close the summary form
