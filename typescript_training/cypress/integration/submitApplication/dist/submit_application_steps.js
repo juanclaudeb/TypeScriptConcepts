@@ -47,30 +47,29 @@ steps_1.And('I select the city value', function () {
 steps_1.And('I click the submit button', function () {
     application_form_pom_1.ApplicationPageObjectModel.clickSubmitBtn();
     // Assert
-    cy.get('tbody > :nth-child(1) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitFullNameTxt)
         .should('contain', 'James Bond');
-    cy.get('tbody > :nth-child(2) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitEmailTxt)
         .should('contain', 'jamesbond@test.com');
-    cy.get('tbody > :nth-child(3) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitMaleTxt)
         .should('contain', 'Male');
-    cy.get('tbody > :nth-child(4) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitCellNumberTxt)
         .should('contain', '0713107536');
-    cy.get('tbody > :nth-child(5) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitDateOfBirthTxt)
         .should('contain', '18 December,1989');
-    cy.get('tbody > :nth-child(6) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitSubjectsTxt)
         .should('contain', 'Computer Science');
-    cy.get('tbody > :nth-child(7) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitMusicHobbyTxt)
         .should('contain', 'Music');
-    cy.get('#close-fixedban > img')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitImgDropD)
         .click();
-    cy.get('tbody > :nth-child(8) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitPictureTxt)
         .should('contain', 'forrest-gump.jpg');
-    cy.get('tbody > :nth-child(9) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitAddressTxt)
         .should('contain', '34 froopy land, bunnyville');
-    cy.get('tbody > :nth-child(10) > :nth-child(2)')
+    cy.get(application_form_pom_1.ApplicationPageObjectModel.submitStateCityTxt)
         .should('contain', 'NCR Delhi');
 });
 steps_1.Then('I close the summary form', function () {
-    cy.get('#closeLargeModal')
-        .click();
+    application_form_pom_1.ApplicationPageObjectModel.clickSubmitCloseBtn();
 });

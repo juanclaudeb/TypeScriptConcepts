@@ -15,6 +15,18 @@ export class ApplicationPageObjectModel {
   public static stateDrpD = '#state > .css-yk16xz-control > .css-1hwfws3';
   public static ctyDrpD = '#city > .css-yk16xz-control > .css-1hwfws3';
   public static submitBtn = '#submit';
+  public static submitFullNameTxt = 'tbody > :nth-child(1) > :nth-child(2)';
+  public static submitEmailTxt = 'tbody > :nth-child(2) > :nth-child(2)';
+  public static submitMaleTxt =  'tbody > :nth-child(3) > :nth-child(2)';
+  public static submitCellNumberTxt = 'tbody > :nth-child(4) > :nth-child(2)';
+  public static submitDateOfBirthTxt = 'tbody > :nth-child(5) > :nth-child(2)';
+  public static submitSubjectsTxt = 'tbody > :nth-child(6) > :nth-child(2)';
+  public static submitMusicHobbyTxt = 'tbody > :nth-child(7) > :nth-child(2)';
+  public static submitImgDropD = '#close-fixedban > img';
+  public static submitPictureTxt = 'tbody > :nth-child(8) > :nth-child(2)';
+  public static submitAddressTxt = 'tbody > :nth-child(9) > :nth-child(2)';
+  public static submitStateCityTxt = 'tbody > :nth-child(10) > :nth-child(2)';
+  public static submitCloseBtn = '#closeLargeModal';
 
   // page actons
 
@@ -83,5 +95,10 @@ export class ApplicationPageObjectModel {
   public static clickSubmitBtn(){
     cy.get(ApplicationPageObjectModel.submitBtn)
       .click();
+  }
+
+  public static clickSubmitCloseBtn(){
+    cy.get(ApplicationPageObjectModel.submitCloseBtn)
+    .click();
   }
 }

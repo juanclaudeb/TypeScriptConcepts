@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-12-08T06:59:31.063Z",
-    "end": "2021-12-08T06:59:52.864Z",
-    "duration": 21801,
+    "start": "2021-12-07T14:24:54.808Z",
+    "end": "2021-12-07T14:25:13.371Z",
+    "duration": 18563,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "38672ecd-1512-4e43-a6a1-07f883356d16",
+      "uuid": "23723fdc-fdf4-425b-9e40-cfbfb5eb74fa",
       "title": "",
       "fullFile": "cypress/integration/submitApplication.feature",
       "file": "cypress/integration/submitApplication.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "246713ac-03f4-4a09-b39e-0089f0d13c7b",
+          "uuid": "0e4571b3-1582-48bc-a496-4c922e2c1ba6",
           "title": "Complete student application form",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Complete student application form",
               "fullTitle": "Complete student application form Complete student application form",
               "timedOut": null,
-              "duration": 16712,
+              "duration": 14668,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "01d4ca8c-542b-4ea6-bd3f-8ba8585d9953",
-              "parentUUID": "246713ac-03f4-4a09-b39e-0089f0d13c7b",
+              "uuid": "810af7da-9799-49a1-b530-a0ec862d2722",
+              "parentUUID": "0e4571b3-1582-48bc-a496-4c922e2c1ba6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "01d4ca8c-542b-4ea6-bd3f-8ba8585d9953"
+            "810af7da-9799-49a1-b530-a0ec862d2722"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16712,
+          "duration": 14668,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,7 +94,7 @@
     },
     "marge": {
       "options": {
-        "overwrite": true
+        "overwrite": false
       },
       "version": "6.0.1"
     }

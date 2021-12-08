@@ -59,6 +59,10 @@ var ApplicationPageObjectModel = /** @class */ (function () {
         cy.get(ApplicationPageObjectModel.submitBtn)
             .click();
     };
+    ApplicationPageObjectModel.clickSubmitCloseBtn = function () {
+        cy.get(ApplicationPageObjectModel.submitCloseBtn)
+            .click();
+    };
     // page elements
     ApplicationPageObjectModel.firstNameTxt = '#firstName';
     ApplicationPageObjectModel.lastNameTxt = '#lastName';
@@ -73,6 +77,18 @@ var ApplicationPageObjectModel = /** @class */ (function () {
     ApplicationPageObjectModel.stateDrpD = '#state > .css-yk16xz-control > .css-1hwfws3';
     ApplicationPageObjectModel.ctyDrpD = '#city > .css-yk16xz-control > .css-1hwfws3';
     ApplicationPageObjectModel.submitBtn = '#submit';
+    ApplicationPageObjectModel.submitFullNameTxt = 'tbody > :nth-child(1) > :nth-child(2)';
+    ApplicationPageObjectModel.submitEmailTxt = 'tbody > :nth-child(2) > :nth-child(2)';
+    ApplicationPageObjectModel.submitMaleTxt = 'tbody > :nth-child(3) > :nth-child(2)';
+    ApplicationPageObjectModel.submitCellNumberTxt = 'tbody > :nth-child(4) > :nth-child(2)';
+    ApplicationPageObjectModel.submitDateOfBirthTxt = 'tbody > :nth-child(5) > :nth-child(2)';
+    ApplicationPageObjectModel.submitSubjectsTxt = 'tbody > :nth-child(6) > :nth-child(2)';
+    ApplicationPageObjectModel.submitMusicHobbyTxt = 'tbody > :nth-child(7) > :nth-child(2)';
+    ApplicationPageObjectModel.submitImgDropD = '#close-fixedban > img';
+    ApplicationPageObjectModel.submitPictureTxt = 'tbody > :nth-child(8) > :nth-child(2)';
+    ApplicationPageObjectModel.submitAddressTxt = 'tbody > :nth-child(9) > :nth-child(2)';
+    ApplicationPageObjectModel.submitStateCityTxt = 'tbody > :nth-child(10) > :nth-child(2)';
+    ApplicationPageObjectModel.submitCloseBtn = '#closeLargeModal';
     return ApplicationPageObjectModel;
 }());
 exports.ApplicationPageObjectModel = ApplicationPageObjectModel;
