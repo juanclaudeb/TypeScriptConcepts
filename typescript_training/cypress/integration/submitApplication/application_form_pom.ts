@@ -28,7 +28,7 @@ export class ApplicationPageObjectModel {
   public static submitStateCityTxt = 'tbody > :nth-child(10) > :nth-child(2)';
   public static submitCloseBtn = '#closeLargeModal';
 
-  // page actons
+  // page actions
 
   public static insertFirstName(firstname: string){
     cy.get(ApplicationPageObjectModel.firstNameTxt)
