@@ -15,7 +15,7 @@ steps_1.Given('I get address details from api', function () {
         }
     }).then(function (response) {
         expect(response.body.status).to.equal('success');
-        firstnameApiResponse = response.body.status;
+        firstnameApiResponse = response.body.message.australian[0];
     });
 });
 steps_1.Given('I am at the test page', function () {

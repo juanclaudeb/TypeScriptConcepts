@@ -16,8 +16,7 @@ Given('I get address details from api', () => {
       }
     }).then(response => {
         expect(response.body.status).to.equal('success');
-        firstnameApiResponse = response.body.status
-    });
+        firstnameApiResponse = response.body.message.australian[0]});
 })
 
 Given('I am at the test page', () => {
@@ -25,8 +24,6 @@ Given('I am at the test page', () => {
 })
 
 And('I insert the firstname value', () => {
-
-
   ApplicationPageObjectModel.insertFirstName(firstnameApiResponse);
 })
 
