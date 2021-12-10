@@ -4,11 +4,25 @@ var application_form_pom_1 = require("./application_form_pom");
 var steps_1 = require("cypress-cucumber-preprocessor/steps");
 require("cypress-file-upload");
 var url = 'https://demoqa.com/automation-practice-form';
+var firstnameApiResponse = '';
+steps_1.Given('I get address details from api', function () {
+    // testing API request
+    cy.request({
+        method: 'GET',
+        url: 'https://dog.ceo/api/breeds/list/all',
+        headers: {
+            'content-type': 'application/json'
+        }
+    }).then(function (response) {
+        expect(response.body.status).to.equal('success');
+        firstnameApiResponse = response.body.status;
+    });
+});
 steps_1.Given('I am at the test page', function () {
     cy.visit(url);
 });
 steps_1.And('I insert the firstname value', function () {
-    application_form_pom_1.ApplicationPageObjectModel.insertFirstName('James');
+    application_form_pom_1.ApplicationPageObjectModel.insertFirstName(firstnameApiResponse);
 });
 steps_1.And('I insert the lastname value', function () {
     application_form_pom_1.ApplicationPageObjectModel.insertLastName('Bond');
@@ -48,7 +62,7 @@ steps_1.And('I click the submit button', function () {
     application_form_pom_1.ApplicationPageObjectModel.clickSubmitBtn();
     // Assert
     cy.get(application_form_pom_1.ApplicationPageObjectModel.submitFullNameTxt)
-        .should('contain', 'James Bond');
+        .should('contain', firstnameApiResponse + ' Bond');
     cy.get(application_form_pom_1.ApplicationPageObjectModel.submitEmailTxt)
         .should('contain', 'jamesbond@test.com');
     cy.get(application_form_pom_1.ApplicationPageObjectModel.submitMaleTxt)

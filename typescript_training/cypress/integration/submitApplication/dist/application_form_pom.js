@@ -4,7 +4,7 @@ exports.ApplicationPageObjectModel = void 0;
 var ApplicationPageObjectModel = /** @class */ (function () {
     function ApplicationPageObjectModel() {
     }
-    // page actons
+    // page actions
     ApplicationPageObjectModel.insertFirstName = function (firstname) {
         cy.get(ApplicationPageObjectModel.firstNameTxt)
             .type(firstname);

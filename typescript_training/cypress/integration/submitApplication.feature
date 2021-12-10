@@ -3,6 +3,7 @@ Feature: Complete student application form
     Complete all fields in the student application form and verify that the data is correct on the submit summary
 
     Scenario: Complete student application form
+        Given I get address details from api
         Given I am at the test page
         And I insert the firstname value
         And I insert the lastname value

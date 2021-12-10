@@ -3,12 +3,31 @@ import { And, Given, Then } from "cypress-cucumber-preprocessor/steps";
 import 'cypress-file-upload';
 
 const url = 'https://demoqa.com/automation-practice-form';
+let firstnameApiResponse = '';
+
+Given('I get address details from api', () => {
+  // testing API request
+  cy.request(
+    {
+      method: 'GET',
+      url: 'https://dog.ceo/api/breeds/list/all',
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(response => {
+        expect(response.body.status).to.equal('success');
+        firstnameApiResponse = response.body.status
+    });
+})
+
 Given('I am at the test page', () => {
   cy.visit(url);
 })
 
 And('I insert the firstname value', () => {
-  ApplicationPageObjectModel.insertFirstName('James');
+
+
+  ApplicationPageObjectModel.insertFirstName(firstnameApiResponse);
 })
 
 And('I insert the lastname value', () => {
@@ -62,7 +81,7 @@ And('I click the submit button', () => {
 
   // Assert
   cy.get(ApplicationPageObjectModel.submitFullNameTxt)
-    .should('contain', 'James Bond');
+    .should('contain', firstnameApiResponse + ' Bond');
 
   cy.get(ApplicationPageObjectModel.submitEmailTxt)
     .should('contain', 'jamesbond@test.com');
